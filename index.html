@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+
+    <title>Data Mahasiswa Indonesia</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Data Mahasiswa Indonesia</h1>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script type="text/javascript">
+        var data = {
+            "mahasiswa": [
+            {
+            "text": "ABIEL ZULIO MASEIDA(19443602TK48798), PT : UNIVERSITAS GADJAH MADA, Prodi: TEKNIK FISIKA",
+            "website-link": "/data_mahasiswa/NUNBRTZBRjUtNUIwMS00RDM1LUIzQjAtMUM4Mjc1RDVENkQy"
+        },
+        {
+            "text": "MASEIDA(505089            ), PT : STKIP MUHAMMADIYAH BONE, Prodi: PENDIDIKAN MATEMATIKA",
+            "website-link": "/data_mahasiswa/RjcwQjI0NjEtMjA5QS00Mjg2LTg3NTItRjU4RUM1MTczRjND"
+        },
+        {
+            "text": "ZULIO RISA ALFIKA(044445868), PT : UNIVERSITAS TERBUKA, Prodi: AKUNTANSI",
+            "website-link": "/data_mahasiswa/NzBBQzM4QTYtQzdEOC00MUI3LThGOUMtNkIwNjhCN0NEOEU5"
+        },
+        {
+            "text": "ZULIO PRASETYO(3211417054), PT : UNIVERSITAS NEGERI SEMARANG, Prodi: GEOGRAFI",
+            "website-link": "/data_mahasiswa/ODNBNTZGQTEtMTEyMC00RDFBLUI5QzUtNzExNTY2NkIzQjMw"
+        },
+        {
+            "text": "ANGGA ZULIO(117510920         ), PT : UNIVERSITAS ISLAM RIAU, Prodi: KRIMINOLOGI",
+            "website-link": "/data_mahasiswa/OTREMTMyNEUtQ0QzQi00MTQ5LTk3RDgtNDNCQjRDQTg3NDQ2"
+        },
+        {
+            "text": "ZULIO HIDAYATUR ROHKMAN(151810283012), PT : UNIVERSITAS AIRLANGGA, Prodi: FISIOTERAPI",
+            "website-link": "/data_mahasiswa/NTQ1MUREOEQtMjZGNC00NDQyLTgwNzgtNDk1NzY3OTQ4QzJG"
+        },
+        {
+            "text": "PRIMA ZULIO ROSA(00023157          ), PT : UNIVERSITAS GAJAYANA, Prodi: MANAJEMEN",
+            "website-link": "/data_mahasiswa/RkM4MzUxREUtREI0MS00RDFELThDQzItOTI2MzlFREQxMzJG"
+        },
+        {
+            "text": "ADAM ZULIO(21050121130078), PT : UNIVERSITAS DIPONEGORO, Prodi: TEKNIK MESIN",
+            "website-link": "/data_mahasiswa/NTkwMTYwRTMtOUNDQi00NUJGLUE0QTAtOURFQkUzQ0YxRjJD"
+        },
+        {
+            "text": "SIDQI ZULIO ROSA(079314076         ), PT : UNIVERSITAS AIRLANGGA, Prodi: SOSIOLOGI",
+            "website-link": "/data_mahasiswa/MjRFRDg5MUMtNThDOS00NThCLTk2MzYtOUNCOUZBQUIxOEM2"
+        },
+        {
+            "text": "ZULIO FIRMAN SYAH(16934020140), PT : AKADEMI PARIWISATA MAJAPAHIT, Prodi: PERHOTELAN",
+            "website-link": "/data_mahasiswa/MkNFM0QxNTEtMjJEMi00NTM4LUJBMzktQjhEM0UyMjZBM0Uy"
+        },
+        {
+            "text": "SIDQI ZULIO ROSA(01023047          ), PT : UNIVERSITAS GAJAYANA, Prodi: MANAJEMEN",
+            "website-link": "/data_mahasiswa/QUQ0Qzc5ODQtRkE1NS00Q0EwLTg2RkMtQkY5RUJFNjg2OEI3"
+        },
+        {
+            "text": "ZULIO NORA(35080062          ), PT : POLITEKNIK TUGU  45 MEDAN, Prodi: MANAJEMEN INFORMATIKA",
+            "website-link": "/data_mahasiswa/MTJGRERENTEtMUQ2RS00NEM5LTg5NDgtMTVBMTFGODQ4MUIy"
+        },
+        {
+            "text": "ZULIO PANGARIBUAN(4112011014), PT : POLITEKNIK NEGERI BATAM, Prodi: AKUNTANSI MANAJERIAL",
+            "website-link": "/data_mahasiswa/M0NEODYyMDMtQTBDNS00QUY1LUIzQzQtN0YzNUVENDlCNjlE"
+        },
+        {
+            "text": "ZULIO ADE SOFIAN(07031282328090), PT : UNIVERSITAS SRIWIJAYA, Prodi: ILMU KOMUNIKASI",
+            "website-link": "/data_mahasiswa/MjEzODEwMEUtMUZDNS00RTNDLUFDNzAtM0ZFMTBBRUY3NDIy"
+        },
+        {
+            "text": "AQSAL ZIKRI ZULIO(225210164), PT : UNIVERSITAS ISLAM RIAU, Prodi: MANAJEMEN",
+            "website-link": "/data_mahasiswa/NTNDNzU2OUUtNEY2Mi00ODdELUJGM0UtMzZEMEFBRjA0OTVG"
+        },
+        {
+            "text": "ECHO ZULIO NASUTION(200810022         ), PT : UNIVERSITAS GRAHA NUSANTARA, Prodi: ILMU PEMERINTAHAN",
+            "website-link": "/data_mahasiswa/NTM0MzNBNDUtM0FFNy00Q0M5LTlBOEYtNUJGODQzMUIxMDE4"
+        },
+        {
+            "text": "SIDQI ZULIO ROSA(1501017009), PT : UNIVERSITAS MULAWARMAN, Prodi: ILMU EKONOMI",
+            "website-link": "/data_mahasiswa/MUQ3QTAyRTctNUQ1Qi00QkJBLUE0MzUtODJFNjE5NEVCQ0M4"
+        },
+        {
+            "text": "ARVIAN ZULIO HERWASTA(091110009         ), PT : UNIVERSITAS ISLAM LAMONGAN, Prodi: PETERNAKAN",
+            "website-link": "/data_mahasiswa/MTc0MkE5NTktNDg3MC00MDU4LUE1MjYtQjJDNDBEMzczMTNE"
+        },
+        {
+            "text": "ZULIO KARIM ALFANDI(C0E020020), PT : UNIVERSITAS JAMBI, Prodi: KEUANGAN DAERAH",
+            "website-link": "/data_mahasiswa/N0I0QTkzQjctNDhCNC00NEJELThCMUItQUJGOTc2N0E0MDA1"
+        },
+        {
+            "text": "NIRWAN ZULIO RIZNANTO(07560316          ), PT : UNIVERSITAS MUHAMMADIYAH MALANG, Prodi: INFORMATIKA",
+            "website-link": "/data_mahasiswa/RjhGMThFMDctNkUzOC00MTcyLUE3NjItREQ2NjJEOTc5N0VE"
+        },
+        {
+            "text": "ZULIO NORA(0901011087        ), PT : STKIP PELITA BANGSA, Prodi: PENDIDIKAN BAHASA INGGRIS",
+            "website-link": "/data_mahasiswa/NzM4QjMxQTgtRTNDMS00RjM3LTg2ODktRjNCNDZCMkE1QjM1"
+        },
+        {
+            "text": "ABIEL BRAMADITYA(041113208         ), PT : UNIVERSITAS AIRLANGGA, Prodi: AKUNTANSI",
+            "website-link": "/data_mahasiswa/QkYxODQ1MTItODRCNi00NkE3LUJCNzgtOTcyRjZDMEI1Mzc5"
+        },
+        {
+            "text": "ABIEL BRAMADITYA(3113259           ), PT : UNIVERSITAS SURABAYA, Prodi: AKUNTANSI",
+            "website-link": "/data_mahasiswa/OUU5NEEwNjMtNTA4OS00NDgyLUI5NjEtOUVFMzQ4OTk4NUFB"
+        },
+        {
+            "text": "NATAN ABIEL UTOMO(022001802071), PT : UNIVERSITAS TRISAKTI, Prodi: MANAJEMEN",
+            "website-link": "/data_mahasiswa/MDQ1RDI5NUQtQkUyRi00NkE1LUEwQjQtQkQ2MTI2QzcwRDc4"
+        },
+        {
+            "text": "ABIEL KRISTIANTO(315150024), PT : UNIVERSITAS TARUMANAGARA, Prodi: ARSITEKTUR",
+            "website-link": "/data_mahasiswa/NkZCQTI5MEItNjQwOC00MTU5LUIwQTQtQ0QyOUUwRDY5MTVB"
+        },
+        {
+            "text": "ABIEL WAHYUDIN(1022031001), PT : UNIVERSITAS FALETEHAN, Prodi: KEPERAWATAN",
+            "website-link": "/data_mahasiswa/MzZENUZFNTAtMDdBOC00M0IxLTlDQ0MtREY5N0E5Rjk1ODE2"
+        },
+        {
+            "text": "ABIEL FITRAHANDA(203010502017), PT : UNIVERSITAS PALANGKA RAYA, Prodi: ARSITEKTUR",
+            "website-link": "/data_mahasiswa/RDQyQkZDN0ItRDZDMy00MEU2LUI2N0MtRUE0QUI4ODIyQTdE"
+        },
+        {
+            "text": "ZULIO ERLANGGA(3032020031), PT : POLITEKNIK NEGERI KETAPANG, Prodi: TEKNOLOGI HASIL PERKEBUNAN",
+            "website-link": "/data_mahasiswa/N0RCQTlDOEQtMzY3NS00NTZDLTgyRTgtMjNGNTZEMEFBRjMy"
+        },
+        {
+            "text": "SIGIT ZULIO(C431180121), PT : UNIVERSITAS SEMARANG, Prodi: TEKNIK ELEKTRO",
+            "website-link": "/data_mahasiswa/OThCQkU3MTctQTg5NC00QjgwLTgxRkQtNkJBOUM0ODQ4RTBC"
+        },
+        {
+            "text": "IRAWANDA ZULIO PASARIBU(13101167          ), PT : INSTITUT TEKNOLOGI MEDAN, Prodi: TEKNIK SIPIL",
+            "website-link": "/data_mahasiswa/NjJGQ0M0NTgtMEI5MS00RjZDLUI3MUQtMkI4QUQzMzY2OTI3"
+        }
+            ]
+        };
+
+        var mahasiswaList = data.mahasiswa;
+        var output = document.getElementById('output');
+        var searchInput = document.getElementById('searchInput');
+
+        function displayMahasiswa(filteredData) {
+            var html = '<div class="table-responsive">';
+            html += '<table class="table table-bordered table-hover">';
+            html += '<thead class="table-primary"><tr><th>Nama</th><th>Universitas</th><th>Program Studi</th><th>Link</th></tr></thead>';
+            html += '<tbody>';
+            
+            filteredData.forEach(function (mahasiswa) {
+                var parts = mahasiswa.text.split(', PT : ');
+                var nama = parts[0];
+                var universitasProdi = parts[1].split(', Prodi: ');
+                var universitas = universitasProdi[0];
+                var prodi = universitasProdi[1];
+
+                html += '<tr>';
+                html += '<td>' + nama + '</td>';
+                html += '<td>' + universitas + '</td>';
+                html += '<td>' + prodi + '</td>';
+                html += '<td><a href="' + mahasiswa["website-link"] + '" class="btn btn-primary btn-sm">Link</a></td>';
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            html += '</div>';
+            output.innerHTML = html;
+        }
+
+        function filterMahasiswa(query) {
+            return mahasiswaList.filter(function (mahasiswa) {
+                return mahasiswa.text.toLowerCase().includes(query.toLowerCase());
+            });
+        }
+
+        function handleSearch() {
+            var query = searchInput.value.trim();
+            var filteredData = filterMahasiswa(query);
+            displayMahasiswa(filteredData);
+        }
+
+        searchInput.addEventListener('input', handleSearch);
+
+        // Tampilkan semua data pada awalnya
+        displayMahasiswa(mahasiswaList);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
